@@ -12,4 +12,4 @@ RUN apk update &&\
     chmod +x ./kind &&\
     mv ./kind /usr/local/bin/kind
 
-CMD echo "Test"
+ENTRYPOINT dockerd
