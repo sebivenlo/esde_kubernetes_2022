@@ -1,1 +1,3 @@
-# esde_kubernetes_2022
+# Kubernetes 
+
+This repository contains all contents from the Kubernetes Workshop. 

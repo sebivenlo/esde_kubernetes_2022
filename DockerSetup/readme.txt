@@ -1,1 +1,2 @@
-Run: minikube start --driver=docker --force
+Run: dockerd &
+CTRL c ones dockerd started up
