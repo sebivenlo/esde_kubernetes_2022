@@ -1,0 +1,25 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "docker build  -t ci_group_n_2022_frontend",
+    "start": "http-server src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ContinuousIntegration21-22GroupN/frontend.git"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "Paul Renkel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ContinuousIntegration21-22GroupN/frontend/issues"
+  },
+  "homepage": "https://github.com/ContinuousIntegration21-22GroupN/frontend#readme",
+  "dependencies": {
+    "http-server": "^14.1.0"
+  }
+}

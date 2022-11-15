@@ -1,1 +1,1 @@
- kubectl port-forward service/mongo-express-service 31000:8081
+kubectl port-forward service/frontend-service 30000:8080
