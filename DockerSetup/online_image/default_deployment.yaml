@@ -32,4 +32,3 @@ spec:
     - protocol: TCP
       port: 0
       targetPort: 0
-      nodePort: 0

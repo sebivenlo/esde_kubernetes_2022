@@ -1,0 +1,23 @@
+Create a kubernetes cluster in which the following components are working together:
+
+- secret containing username and password (encode username / password into base64 by running "echo -n 'string' | base64")
+- configmap containing url to database
+
+MongoDB deployment & internal service (type: ClusterIP)
+- image: mongo
+- port for container: 27017
+- Environment variables for deployment:
+    - MONGO_INITDB_ROOT_USERNAME
+    - MONGO_INITDB_ROOT_PASSWORD
+
+mongo-express deployment & external service (type: LoadBalancer)
+- image: mongo-express
+
+Environment variables for deployment:
+    - MONGO_INITDB_ROOT_USERNAME
+    - MONGO_INITDB_ROOT_PASSWORD
+    - ME_CONFIG_MONGODB_SERVER (contains url to database)
+
+Port-forward the service port of the mongodb service and connect to it using the mongosh shell
+    - kubectl port-forward service/your_service_name externalPort:servicePort
+    - mongosh --port externalPort
