@@ -19,6 +19,12 @@ spec:
           image: sample
           ports:
             - containerPort: 0
+          env:
+            - name: MONGO_INITDB_ROOT_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: default-secret
+                  key: sample-root-username
 ---
 apiVersion: v1
 kind: Service
